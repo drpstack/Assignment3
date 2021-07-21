@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+body{
+
+    margin:0;
+    display:flex;
+    font-family:'Karla' , sans-serif;
+}
+#navbar{
+    position:fixed;
+    width:25%;
+    height:100%;
+    top:0;
+    left:0;
+    display:flex;
+    flex-direction:column;
+    background-color:#dedede;
+    padding:1.5em;
+    overflow-y:auto;
+}
+
+#navbar header{
+    font-size: 2rem;
+    font-weight:800;
+}
+
+.nav-link{
+    text-decoration:none;
+    padding:1em;
+    transition:all 0.3s;
+    font-size:1.2rem;
+    color:black;
+
+}
+
+.nav-link:hover{
+    border-left:4px solid #9d0102;
+}
+
+#main-document{
+    margin-left:30%;
+    width:70%;
+    letter-spacing:1px;
+}
+
+.main-section{
+    padding:1.5em;
+}
+
+.main-section header{
+    font-size:2rem;
+    font-weight:800;
+
+}
+pre{
+    margin:0;
+}
+code{
+    color: #9d0102;
+  padding: 1.2em 1em;
+  background-color: black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  line-height: 2;
+  overflow-y:scroll;
+
+}
+
+.imagecarousel{
+
+    display:flex;
+    flex-direction:row;
+    background-color:aqua;
+    border-radius:5px;
+}
+#greetingText{
+    color:#9d0102;
+    font-weight:800px;
+    font-size: larger;
+}
+
+.center-image{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:40%;
+}
+
+@media(max-width:600px)
+{
+    body
+    {
+        flex-direction:column;
+        
+    }
+    #navbar
+    {
+        position:relative;
+        width:100%;
+        
+        border-bottom:5px solid black;
+    }
+    .nav-link
+    {
+        font-size:1rem;
+    }
+    #main-document
+    {
+        width:100%;
+        margin-left:0;
+       
+    }
+    
+       
+       
+    }
+
+
+

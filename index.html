@@ -1,0 +1,352 @@
+<html>
+    <head>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css">
+    <link rel="stylesheet" href="main.css">
+   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+   <script src="script.js"></script>
+</head>
+<body>
+    <nav id="navbar">
+        <header>KTern.AI Assignment 3</header>
+        <a class="nav-link" href="#section_1">Section 1:Java Script Basics</a>
+        
+        <a class="nav-link" href="#section_2">Section 2: Variables</a>
+        
+        <a class="nav-link" href="#section_3">Section 3: String</a>
+        
+        <a class="nav-link" href="#section_4">Section 4:ParseInt()</a>
+
+        <a class="nav-link" href="#section_5">Section 5:Statements</a>
+
+        <a class="nav-link" href="#section_6">Section 6:Functions</a>
+        
+
+
+
+    </nav>
+    <main id="main-document">
+
+        <section id="section_1" class="main-section">
+            <header>Section 1: Java Script Basics</header>
+            <div>
+                <p>Click on the Button to Get two Consecutive alerts </p>
+                 <button type="button" onclick="alertME()">
+                Click Me
+                </button>
+
+        
+            <pre>
+            <code class="nohighlight" >
+function alertME()
+{
+ alert('Hello world');
+ alert('This is your Second alert')
+}
+
+            </code>
+            </pre>
+
+        </div>
+        </section>
+        <hr>  
+        <section id="section_2" class="main-section">
+            <header>Section 2:Variables</header>
+            <div>
+                <p> Given three variables
+                    <ul>
+                    <li>var daysInYear = 365.25 </li>
+                    <li>var daysInWeek = 7 </li>
+                    <li>var yearsInLifetime = 80</li>
+                    </ul>
+                    <br />
+                    <br />
+                    Click on the Button to Get the average Number of Weeks in a Human lifetime
+                   <p id="weeks"> </p>
+                </p>
+                <button type="button" onclick="numberOfWeeks()">
+                    Click Me
+                    </button>
+
+            </div>
+            <pre>
+            <code class="nohighlight" >
+function numberOfWeeks()
+{
+                
+    let daysInYear= 365.25;
+    let daysInWeek=7;
+    let yearsInLifetime= 80;
+    let endresult= (daysInYear*yearsInLifetime)/daysInWeek;
+    document.getElementById("weeks").innerHTML = endresult;
+}
+
+            </code>
+            </pre>
+
+
+        </section>  
+        <hr>
+         <section id="section_3" class="main-section">
+            <header>Section 3:String</header>
+            <div>
+                <p>
+                    <ol>
+                        <li>Create a variable called greeting. Store the value 'hello' in it.</li><br />
+	
+                        <li>Create a variable called name. Store the value 'world' in it.</li><br/>
+                 
+                        <li>Use your variables to alert "hello world"</li><br />
+            
+                        <li>Use a couple of regex to change the output to "he110 w0r1d"</li>  <br/>
+                            
+                        <li>Use a couple more functions to reverse the result. A coding device! Write the reverse decoder.</li><br/>
+
+
+                    </ol>
+
+
+                </p>
+                <p id="regexresult"> </p>
+                <p id="regexReversed"> </p>
+                <button type="button" onclick="regex1()">
+                    Click Me
+                    </button>
+
+            </div>
+            <pre>
+            <code class="nohighlight" >
+function Regex1()
+{
+    let text1="hello";
+    let text2="world";
+    text3=text1+" "+text2;
+    alert(text3);
+    alert("Performing Replacement using Regex")
+    let text4= text3.replace(/l/g,"1");
+    text4 = text4.replace(/o/g,"0");
+    document.getElementById("regexresult").innerHTML = text4;
+    document.getElementById("regexReversed").innerHTML= "reversed  is: "+reverseRegex(text4);
+}
+function reverseRegex(val)
+{
+    return val.split('').reverse().join('');
+}
+
+
+            </code>
+            </pre>
+
+
+        </section>  
+        <hr>
+        <section id="section_4" class="main-section">
+            <header>Section 4:parseInt()</header>
+            <div>
+                <p>
+                    Find the parseInt(x) values for the following 'x' values:
+                    <ol>
+                       <li>parseInt("100")</li> <br />
+	
+                        <li>parseInt("2021@kternai");</li><br />
+		
+                        <li>parseInt("kternai@2021");</li><br />
+		
+                       <li>parseInt("3.14")	</li> <br />
+	
+                        <li>parseInt("21 7 2018")</li><br />
+	
+                       <li>parseInt("100",10)</li> <br />
+		
+                        <li>parseInt("8",8)</li><br />
+		
+                        <li>parseInt("15",8)</li><br />
+		
+                        <li>parseInt("16",16)</li><br />
+		
+                       <li>parseInt(" 100 ")</li> <br />
+	
+                       <li>parseInt("0x16")</li> <br />
+                    </ol>
+                </p>
+                <p id="parseOutput">
+
+                </p>
+
+
+                <button type="button" onclick="parseAll()">
+                    Click Me
+                    </button>
+
+                    <p>Click on the Button to find the parseInt(X) Values</p>
+
+            </div>
+            <pre>
+            <code class="nohighlight" >
+function parseAll()
+{
+    var a=parseInt("100")+"&lt;br&gt;";
+            
+    var b=parseInt("2021@kternai")+"&lt;br&gt;";
+        
+    var c=parseInt("kternai@2021")+"&lt;br&gt;";
+            
+    var d=parseInt("3.14")+"&lt;br&gt;";
+        
+    var e=parseInt("21 7 2018")+"&lt;br&gt;";
+            
+    var f=parseInt("100",10)+"&lt;br&gt;";
+            
+    var g=parseInt("8",8)+"&lt;br&gt;";
+            
+    var h=parseInt("15",8)+"&lt;br&gt;";
+            
+    var i=parseInt("16",16)+"&lt;br&gt;";
+        
+    var j=parseInt(" 100 ")+"&lt;br&gt;";
+            
+    var k=parseInt("0x16")+"&lt;br&gt;";
+
+    var n="1."+a+"2."+b+"3."+c+"4."+d+"5."+e+"6."+f+"7."+g+"8."+h+"9."+i+"10."+j+"11."+k;
+    document.getElementById("parseOutput").innerHTML=n;
+}
+
+            </code>
+            </pre>
+
+
+        </section>  
+        <hr>
+        <section id="section_5" class="main-section">
+            <header>Section 5:Statements</header>
+            <div>
+                <p>
+                    Create a little program that tells you if it's the morning, afternoon or night. 
+                </p>
+                <p>Based on the Time one of the three Images might show for you!</p>
+                <div class="imagecarousel">
+                    <figure>
+                        <img src="assets/goodmorning.jpg" width=100px height=100px>
+                        <figcaption>Good Morning</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/goodafternoon.jpg" width=100px height=100px>
+                        <figcaption>Good afternoon</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/goodnight.jpg" width=100px height=100px>
+                        <figcaption>Good night</figcaption>
+                    </figure>
+                    
+
+                </div>
+                <h3><u>Your Greetings!!</h3></u></h3>
+                <br>
+                
+                <img id="dayImage" src="assets/day.jpg" width=300px height=300px>
+                <br>
+                <p id="greetingText">
+
+                </p>
+                <p>
+                    If the Image has not loaded for you automatically , Click on this Button for your Greeting!!
+                </p>
+
+                
+               
+                <br/><button type="button" onclick="displayDay()">
+                    Click Me
+                    </button>
+                    
+            </div>
+            <pre>
+            <code class="nohighlight" >
+function displayDay(){
+    var mydate=new Date();
+    var myhrs=mydate.getHours();
+    var target=document.getElementById('dayImage');
+    var text;
+    
+    if(myhrs&lt12)
+    {
+        text="Good Morning";
+        target.src="assets/goodmorning.jpg";
+    }
+    else if(myhrs>12 &&myhrs&lt16)
+    {
+        text="Good Afternoon";
+        target.src="assets/goodafternoon.jpg";
+    }
+    else{
+        text="Good Night";
+        target.src="assets/goodnight.jpg" ;
+        
+        
+    }
+    document.getElementById("greetingText").innerHTML= text;
+    
+}
+
+            </code>
+            </pre>
+
+
+        </section>  
+        <hr>
+        <section id="section_6" class="main-section">
+            <header>Section 6: Functions</header>
+            <div>
+                <p>
+                    <ol>
+                    <li>Write a function called sandwich calculator. This should accept one value: slicesOfBread</li><br>
+	<li>The function should return the total number of possible sandwiches based on the amount of slices available, so if there are 10 slices, it should return 5. Test your function with an alert box.</li><br>
+	<li>Extend your function so it accepts two values, slicesOfBread and slicesOfCheese.</li><br>
+	<li>It takes two slices of bread and one of cheese to make a sandwich. The function should return the total number of possible sandwiches, so if there are 10 slices of bread, but only 1 of cheese, it should return 1. You'll need an if statement to make this work.</li>
+    <br>
+    </ol>
+    <img src="assets/sandwich.jpg" width=200px height=200px class="center-image">
+                </p>
+                <p>Enter the Number of bread Slices:</p>
+                <input type="number" id="breadSlices"/>
+                <p>Enter the Number of Cheese Slices:</p>
+                <input type="number" id="cheeseSlices"/>
+                <br/><button type="button" onclick="sandwichCalculator()">
+                    Click Me
+                    </button>
+
+            </div>
+            <pre>
+            <code class="nohighlight" >
+
+function sandwichCalculator()
+{
+
+    var slices=document.getElementById('breadSlices').value;
+    var cheese=document.getElementById('cheeseSlices').value;
+    if((slices/2)==cheese)
+    {
+        alert('the number of sandwiches you can make are:'+slices/2);
+    }
+    else if((slices/2)>=cheese)
+    {
+        alert('the number of sandwiches you can make are:'+cheese)
+    }
+    else if((slices/2)&lt;=cheese)
+    {   
+    alert('the number of sandwiches you can make are:'+slices/2);
+    }
+
+}
+
+            </code>
+            </pre>
+
+
+        </section>  
+
+    </main>
+
+
+</body>
+    
+</html>
